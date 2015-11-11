@@ -5,9 +5,13 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body ng-app="myApp">
+  <div ng-controller="myCtrl">
+    <my-directive the-biz="biz" change-biz="editBiz(id, obj)" ng-repeat="biz in bizzes"></my-directive>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
   <script src="app.js"></script>
+  <script src="directive.js"></script>
   <script src="controller.js"></script>
   <script src="service.js"></script>
 </body>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="review">
+<head>
+  <title></title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="mainCtrl">
+  <ul>
+    <h1 ng-bind="focusBird.commonName"></h1>
+    <li ng-bind="focusBird.family"></li>
+    <li ng-bind="focusBird.familyName"></li>
+    <li ng-bind="focusBird.order"></li>
+    <li ng-bind="focusBird.scientificName"></li>
+  </ul>
+  <bird-dir bird="theBird" change-bird="changeFocusBird(bird)" ng-repeat="theBird in birds"></bird-dir>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="controller.js"></script>
+  <script src="service.js"></script>
+  <script src="directive.js"></script>
+</body>
+</html>

@@ -5,10 +5,16 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body ng-app="weatherBird">
+  <div ng-controller="mainCtrl">
+    <ui-view></ui-view>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="node_modules/angular-ui-router/build/angular-ui-router.js"></script>
   <script src="app.js"></script>
   <script src="controller.js"></script>
   <script src="service.js"></script>
+  <script src="weather/weatherCtrl.js"></script>
+  <script src="home/homeCtrl.js"></script>
 </body>
 </html>
